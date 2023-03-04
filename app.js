@@ -11,7 +11,7 @@ const PORT = process.env.PORT
 //middleware
 app.use(express.json());
 app.use(cors({
-    origin: "*"
+    origin: "https://playful-kelpie-719896.netlify.app/"
 }))
 
 
