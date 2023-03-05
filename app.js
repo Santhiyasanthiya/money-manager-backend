@@ -11,7 +11,7 @@ const PORT = process.env.PORT
 //middleware
 app.use(express.json());
 app.use(cors({
-    origin: "https://playful-kelpie-719896.netlify.app",
+    origin: "*",
     credentials:true
 }))
 
@@ -19,7 +19,7 @@ app.use(cors({
 
 //router(trans)
 readdirSync('./routes').map((route) =>app.use('/api/v1', require('./routes/' + route)))
-    const server = () =>{
+    const server = () => {
        db()
         app.listen(PORT, () => {
             console.log("you are listning:", PORT)
